@@ -29,6 +29,16 @@ return array(
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+        'rbac'=>array(
+            // Table where Users are stored. RBAC Manager use it as read-only
+            'tableUser'=>'User',
+            // The PRIMARY column of the User Table
+            'columnUserid'=>'id',
+            // only for display name and could be same as id
+            'columnUsername'=>'username',
+            // only for display email for better identify Users
+            'columnEmail'=>'email' // email (only for display)
+        ),
 
 	),
 	
@@ -44,7 +54,7 @@ return array(
 
 		'user'=>array(
 			// enable cookie-based authentication
-            'class' => 'WebUser',
+            //'class' => 'WebUser', //PhpAuthManager
 			'allowAutoLogin'=>true,
             'loginUrl'=>array('site/login'),
 		),
@@ -102,8 +112,11 @@ return array(
 			'charset' => 'utf8',
 		),
         'authManager'=>array(
-            'class'=>'PhpAuthManager',
-            'defaultRoles' => array('guest'),
+            //'class'=>'PhpAuthManager',
+            'class'=>'CDbAuthManager',
+            'connectionID'=>'db',
+            'defaultRoles' => array('registered'),
+            'showErrors'=>true,
         ),
 		/*'mongodb' => array(
             'class'            => 'EMongoDB',

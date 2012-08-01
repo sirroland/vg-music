@@ -15,7 +15,7 @@
 
         public function tableName()
         {
-            return 'users';
+            return 'user';
         }
     }
 

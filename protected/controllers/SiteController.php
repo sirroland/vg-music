@@ -40,8 +40,8 @@ class SiteController extends Controller
                 'roles'=>array('admin','administrator'),
             ),
             array('deny',
-                'actions'=>array('delete'),
-                'users'=>array('*'),
+                'actions'=>array('contact'),
+                'roles'=>array('SuperAdmin'),
             ),
         );
     }
