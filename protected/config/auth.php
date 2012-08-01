@@ -34,6 +34,15 @@
             'bizRule' => null,
             'data' => null
         ),
+        'root' => array(
+            'type' => CAuthItem::TYPE_ROLE,
+            'description' => 'Administrator',
+            'children' => array(
+                'administrator',
+            ),
+            'bizRule' => null,
+            'data' => null
+        ),
     );
 
 ?>
