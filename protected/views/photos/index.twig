@@ -1,0 +1,31 @@
+{#<?php
+/*$this->breadcrumbs=array(
+	'Photoses',
+);
+
+$this->menu=array(
+	array('label'=>'Create Photos', 'url'=>array('create')),
+	array('label'=>'Manage Photos', 'url'=>array('admin')),
+);
+?>
+
+<h1>Photoses</h1>
+
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+));*/
+?>
+#}
+
+<div class="photos">
+    {%for photo in photos%}
+    <div class="photo">
+        <a href="/photos/photo/{{photo.id}}">
+            <img src="/media/uploads/images/thumb/{{photo.file}}" alt="{{photo.title}}">
+            <span>{{photo.title}}</span>
+            <!--<div class="description">{{photo.description}}</div>-->
+        </a>
+    </div>
+    {%endfor%}
+</div>

@@ -1,0 +1,124 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/print.css" media="print" />
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/ie.css" media="screen, projection" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/form.css" />
+
+	<title>{{this.pageTitle}}</title>
+</head>
+
+<body>
+
+<div class="container" id="page">
+
+	<div id="header">
+		<div id="logo">{{ C.Html.encode(App.name) | raw }}</div>
+	</div><!-- header -->
+
+    <div id="mainmenu">
+        {{ this.widget('zii.widgets.CMenu',{
+        'items':[
+            {'label':'Home', 'url':['/site/index']},
+            {'label':'About', 'url':{0:'/site/page', 'view':'about'} },
+            {'label':'Contact', 'url':['/site/contact']},
+            {'label':'Login', 'url':['/site/login'], 'visible':App.user.isGuest},
+            {'label':'Logout ('~App.user.name~')', 'url':['/site/logout'], 'visible':not App.user.isGuest}
+        ]
+    }, true) | raw }}
+    </div><!-- mainmenu -->
+
+	{#<?php /*if(isset($this->breadcrumbs)):?>
+		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+		)); ?><!-- breadcrumbs -->
+	<?php endif */?>---------------
+
+	{{content | raw}}
+
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; by My Company.<br/>
+		All Rights Reserved.<br/>
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+</body>
+</html>#}
+
+
+<html>
+<head>
+    <title>{{this.pageTitle}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="{{App.request.baseUrl}}/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{App.request.baseUrl}}/css/media/mediaelementplayer.min.css" type="text/css">
+    <script type="text/javascript" src="{{App.request.baseUrl}}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{App.request.baseUrl}}/js/media/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="{{App.request.baseUrl}}/js/music.js"></script>
+
+</head>
+<body>
+<div class="main_wrap">
+    <div class="header">
+        <div class="main_logo">
+            <a href="/"><span>VG</span>-MUSIC</a>
+        </div>
+        <div id="main_menu">
+            {%set home=Yii.t('main','Home')%}
+            {%set about=Yii.t('main','About')%}
+            {%set contact=Yii.t('main','Contact')%}
+            {%set login=Yii.t('main','Login')%}
+            {%set logout=Yii.t('main','Logout ({username})',{'{username}':App.user.name})%}
+            {{ this.widget('zii.widgets.CMenu',{
+                'items':[
+                    {'label':home, 'url':['/site/index']},
+                    {'label':about, 'url':{0:'/site/page', 'view':'about'} },
+                    {'label':contact, 'url':['/site/contact']},
+                    {'label':login, 'url':['/site/login'], 'visible':App.user.isGuest},
+                    {'label':logout, 'url':['/site/logout'], 'visible':not App.user.isGuest}
+                ]
+            }, true) | raw }}
+            {#{'label':'Logout ('~App.user.name~')', 'url':['/site/logout'], 'visible':not App.user.isGuest}#}
+        </div>
+        <div  id="language-selector" style="float:right; margin:5px;">
+{#
+		{{ C.Html.link('<span class="ru">рус</span>', {'':'site/', 'language': 'ru'}, {'class': ''}) | raw }}
+		{{ C.Html.link('<span class="ua">укр</span>', {'':'site/', 'language': 'ua'}, {'class': ''}) | raw }}
+		
+		CHtml::link('<span class="ru">по-русски</span>',array(Yii::app()->defaultController.'/',Yii::app()->urlManager->langParam=>'ru'),array(
+			'class'=>((Yii::app()->language=='ru') ? 'action':''),
+		));?>
+		<?php echo CHtml::link('<span class="ua">украiнською</span>',array(Yii::app()->defaultController.'/',Yii::app()->urlManager->langParam=>'uk'),array(
+			'class'=>((Yii::app()->language=='uk') ? 'action':''),
+		));?>
+#}				
+           {{
+                void(this.widget('application.components.widgets.LanguageSelector'))
+            }}
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_content">
+
+            {{content | raw}}
+        </div>
+    </div>
+    <div class="footer">
+        {{lang.copyright}}
+    </div>
+</div>
+</body>
+</html>

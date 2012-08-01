@@ -1,0 +1,23 @@
+ SiteName: "{{this.pageTitle}}"
+
+ <audio id="player2" src="http://cs1-4.userapi.com/d29/ed430561c1fa05.mp3" type="audio/mp3" controls="controls">
+ </audio>
+ <audio id="player3" src="http://cs1-31.userapi.com/d12/7d2789d8c451c3.mp3" type="audio/mp3" controls="controls">
+ </audio>
+ <audio id="player4" src="http://cs1-31.userapi.com/d13/92bee5edc9ed90.mp3" type="audio/mp3" controls="controls">
+ </audio>
+
+ <video width="640" height="360" id="player1">
+
+     <!-- Pseudo HTML5 -->
+     <source type="video/youtube" src="http://www.youtube.com/watch?v=nOEw9iiopwI" />
+
+ </video>
+
+         <div class="play">Play</div>
+         <div class="stop">Stop</div>
+ {% if App.user.checkAccess('administrator')%}
+    echo "hello, I'm administrator";
+ {%else%}
+    Hello, Guest.
+ {%endif%}
