@@ -1,4 +1,4 @@
 assets/
-protected/runtime/
+#protected/runtime/
 themes/classic/views/
 .idea/

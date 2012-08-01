@@ -10597,3 +10597,480 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/08/01 19:48:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:48:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vg-music.users' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `users`.
+in D:\github\yii\protected\models\User.php (13)
+in D:\github\yii\protected\components\UserIdentity.php (8)
+in D:\github\yii\protected\models\LoginForm.php (52)
+2012/08/01 19:48:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "users" for active record class "User" cannot be found in the database.' in D:\github\yii\protected\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 D:\github\yii\protected\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 D:\github\yii\protected\models\User.php(13): CActiveRecord::model('User')
+#2 D:\github\yii\protected\components\UserIdentity.php(8): User::model()
+#3 D:\github\yii\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 D:\github\yii\protected\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 D:\github\yii\protected\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 D:\github\yii\protected\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 D:\github\yii\protected\controllers\SiteController.php(115): CModel->validate()
+#8 D:\github\yii\protected\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 D:\github\yii\protected\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\github\yii\protected\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\github\yii\protected\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 D:\github\yii\protected\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#16 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('login')
+#18 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#19 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\github\yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/login
+HTTP_REFERER=http://vg-music.loc/login
+---
+2012/08/01 19:48:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:50:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:50:27 [error] [exception.CException] exception 'CException' with message 'Property "User.title" is not defined.' in D:\github\yii\protected\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\github\yii\protected\framework\db\ar\CActiveRecord.php(144): CComponent->__get('title')
+#1 D:\github\yii\protected\components\UserIdentity.php(16): CActiveRecord->__get('title')
+#2 D:\github\yii\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 D:\github\yii\protected\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#4 D:\github\yii\protected\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 D:\github\yii\protected\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#6 D:\github\yii\protected\controllers\SiteController.php(115): CModel->validate()
+#7 D:\github\yii\protected\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#8 D:\github\yii\protected\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\github\yii\protected\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 D:\github\yii\protected\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\github\yii\protected\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#15 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('login')
+#17 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#18 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 D:\github\yii\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/login
+HTTP_REFERER=http://vg-music.loc/login
+---
+2012/08/01 19:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:51:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:54:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:57:01 [error] [exception.CException] exception 'CException' with message 'Property "CAccessRule.SuperAdmin" is not defined.' in D:\github\yii\protected\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(93): CComponent->__set('SuperAdmin', Array)
+#1 D:\github\yii\protected\framework\web\CController.php(1145): CAccessControlFilter->setRules(Array)
+#2 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#5 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('index')
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#8 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\github\yii\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/index
+HTTP_REFERER=http://vg-music.loc/contact
+---
+2012/08/01 19:57:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:57:20 [error] [exception.CException] exception 'CException' with message 'Property "CAccessRule.SuperAdmin" is not defined.' in D:\github\yii\protected\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(93): CComponent->__set('SuperAdmin', Array)
+#1 D:\github\yii\protected\framework\web\CController.php(1145): CAccessControlFilter->setRules(Array)
+#2 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#5 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('contact')
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#8 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\github\yii\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/contact
+HTTP_REFERER=http://vg-music.loc/site/page/view/about
+---
+2012/08/01 19:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:57:40 [error] [exception.CException] exception 'CException' with message 'Property "CAccessRule.role" is not defined.' in D:\github\yii\protected\framework\base\CComponent.php:174
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(93): CComponent->__set('role', Array)
+#1 D:\github\yii\protected\framework\web\CController.php(1145): CAccessControlFilter->setRules(Array)
+#2 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#5 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#6 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('page')
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/page')
+#8 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\github\yii\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/page/view/about
+HTTP_REFERER=http://vg-music.loc/site/index
+---
+2012/08/01 19:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:58:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:58:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:58:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\github\yii\protected\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\github\yii\protected\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\github\yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/contact
+HTTP_REFERER=http://vg-music.loc/site/page/view/about
+---
+2012/08/01 19:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 19:58:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:00:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:00:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:00:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:00:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:00:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\github\yii\protected\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\github\yii\protected\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\github\yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/contact
+HTTP_REFERER=http://vg-music.loc/contact
+---
+2012/08/01 20:00:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:02:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:02:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\github\yii\protected\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\github\yii\protected\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\github\yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/contact
+HTTP_REFERER=http://vg-music.loc/site/index
+---
+2012/08/01 20:02:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:12:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:12:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/01 20:14:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\github\yii\protected\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#1 D:\github\yii\protected\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\github\yii\protected\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\github\yii\protected\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\github\yii\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\github\yii\protected\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\github\yii\protected\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\github\yii\protected\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\github\yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ru/contact
+HTTP_REFERER=http://vg-music.loc/ru
+---
+2012/08/01 20:14:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\github\yii\protected\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\github\yii\protected\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\github\yii\protected\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\github\yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
