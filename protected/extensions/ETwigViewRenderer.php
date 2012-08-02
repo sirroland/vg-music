@@ -73,6 +73,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
 
         $app = Yii::app();
         $Yii = new ETwigViewRendererStaticClassProxy('Yii');
+        $wideImage = new ETwigViewRendererStaticClassProxy('EWideImage');
 
         /** @var $theme CTheme */
         $theme = $app->getTheme();
@@ -98,6 +99,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
         // Adding Yii::app() object to globals
         $this->_twig->addGlobal('App', $app);
         $this->_twig->addGlobal('Yii', $Yii);
+        $this->_twig->addGlobal('EWideImage', $wideImage);
 
         // Adding Yii's core static classes proxy as 'C' shortcut (usage: {{C.Html.tag(...)}})
         $this->_twig->addGlobal('C', new ETwigViewRendererYiiCoreStaticClassesProxy());

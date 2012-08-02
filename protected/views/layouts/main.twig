@@ -1,3 +1,5 @@
+{# set path=Yii.getPathOfAlias('application')  #}
+{#% set images=App.basePath~'../images'  %#}
 <html>
 <head>
     <title>{{this.pageTitle}}</title>
@@ -43,7 +45,8 @@
     </div>
     <div class="main">
         <div class="main_content">
-
+            {#TOKEN: {{App.request.csrfToken}}#}
+            {#{ void(EWideImage.load(images~'/foto.jpg').resize(50, 30).saveToFile(images~'/small.jpg')) }#}
             {{content | raw}}
         </div>
     </div>
