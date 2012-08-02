@@ -1,6 +1,6 @@
 <?php
 // женя мудак
-class SiteController extends Controller
+class SiteController extends Controller //ваыа
 {
 	/**
 	 * Declares class-based actions.
