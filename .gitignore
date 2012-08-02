@@ -1,5 +1,5 @@
 assets/
-protected/runtime/
+protected/runtime
 protected/framework/gii/assets/
 protected/framework/zii/assets/
 themes/classic/views/
