@@ -3,7 +3,7 @@
     class UrlManager extends CUrlManager
     {
         public function createUrl($route,$params=array(),$ampersand='&')
-        {
+        {// втули сюда языки, что ты сделал.
             if (!isset($params['language'])) {
 				/*
                 if (Yii::app()->user->hasState('language'))
