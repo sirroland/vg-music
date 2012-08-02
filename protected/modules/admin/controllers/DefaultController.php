@@ -7,6 +7,10 @@
         {
             $this->render('index');
         }
+        public function actionPages()
+        {
+            $this->render('index');
+        }
     }
 
 ?>
