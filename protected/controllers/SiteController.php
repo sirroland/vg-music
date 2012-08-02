@@ -1,6 +1,6 @@
 <?php
-// женя мудак
-class SiteController extends Controller //ваыа
+
+class SiteController extends Controller
 {
 	/**
 	 * Declares class-based actions.
@@ -20,7 +20,7 @@ class SiteController extends Controller //ваыа
 			),
 		);
 	}
-
+//
     public function filters()
     {
         return array(
