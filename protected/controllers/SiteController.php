@@ -1,6 +1,5 @@
 <?php
-// ПАША мудак
-//))))
+
 class SiteController extends Controller
 {
 	/**
