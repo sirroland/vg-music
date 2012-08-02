@@ -38,20 +38,8 @@
             {#{'label':'Logout ('~App.user.name~')', 'url':['/site/logout'], 'visible':not App.user.isGuest}#}
         </div>
         <div  id="language-selector" style="float:right; margin:5px;">
-{#
-		{{ C.Html.link('<span class="ru">рус</span>', {'':'site/', 'language': 'ru'}, {'class': ''}) | raw }}
-		{{ C.Html.link('<span class="ua">укр</span>', {'':'site/', 'language': 'ua'}, {'class': ''}) | raw }}
-		
-		CHtml::link('<span class="ru">по-русски</span>',array(Yii::app()->defaultController.'/',Yii::app()->urlManager->langParam=>'ru'),array(
-			'class'=>((Yii::app()->language=='ru') ? 'action':''),
-		));?>
-		<?php echo CHtml::link('<span class="ua">украiнською</span>',array(Yii::app()->defaultController.'/',Yii::app()->urlManager->langParam=>'uk'),array(
-			'class'=>((Yii::app()->language=='uk') ? 'action':''),
-		));?>
-#}				
-           {{
-                void(this.widget('application.components.widgets.LanguageSelector'))
-            }}
+
+        {{ void(this.widget('application.components.widgets.LanguageSelector')) }}
 
         </div>
     </div>

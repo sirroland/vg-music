@@ -45,7 +45,7 @@ return array(
 	
 
 	// application components
-		'components'=>array(
+	'components'=>array(
 
         'request'=>array(
             'enableCookieValidation'=>true,
@@ -60,18 +60,7 @@ return array(
 		),
 
 		// uncomment the following to enable URLs in path-format
-/*       'urlManager'=>array(
-			'urlFormat'=>'path',
-            'class'=>'application.extensions.urlManager.LangUrlManager',
-			'showScriptName'=>false,
-            'languages'=>array('ru','ua'),
-            'langParam'=>'language',
-			'rules'=>array(
-'<language:(ru|ua)>/<_m:(srbac)>/<_c>/<_a>*' => '<_m>/<_c>/<_a>', '<language:(ru|ua)>/<_c>/<_a>*' => '<_c>/<_a>', '<language:(ru|ua)>/<_c>' => '<_c>', '<language:(ru|ua)>' => '',
-			),
-        ),
-	*/	
-	/*
+	    /*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
             'showScriptName'=>false,
@@ -87,15 +76,16 @@ return array(
             'urlFormat'=>'path',
             'showScriptName'=>false,
             'rules'=>array(
-                '/<language:(de|ru|en)>/' => 'site/index',
-                '/<language:(de|ru|en)>/<action:(contact|login|logout)>/*' => 'site/<action>',
-                '/<language:(de|ru|en)>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                '/<language:(de|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-                '/<language:(de|ru|en)>/<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
-                '/<action:(contact|login|logout)>/*' => 'site/<action>',
-                '/<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                '/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-                '/<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+                '<language:(de|ru|en)>/' => 'site/index',
+                '<language:(de|ru|en)>/<action:(contact|login|logout)>/*' => 'site/<action>',
+                '<language:(de|ru|en)>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<language:(de|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<language:(de|ru|en)>/<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+                '' => 'site/index',
+                '<action:(contact|login|logout)>/*' => 'site/<action>',
+                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
             ),
         ),
 
@@ -111,6 +101,7 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+
         'authManager'=>array(
             //'class'=>'PhpAuthManager',
             'class'=>'CDbAuthManager',
@@ -118,19 +109,23 @@ return array(
             'defaultRoles' => array('registered'),
             'showErrors'=>true,
         ),
-		/*'mongodb' => array(
+
+		/*
+        'mongodb' => array(
             'class'            => 'EMongoDB',
             'connectionString' => 'mongodb://localhost',
             'dbName'           => 'fingerdb',
             'fsyncFlag'        => true,
             'safeFlag'         => true,
             'useCursor'        => false,
-        ),*/
+        ),
+		*/
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
         ),
+
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -146,6 +141,7 @@ return array(
 				*/
 			),
 		),
+
 		'viewRenderer' => array(
 			'class' => 'ext.ETwigViewRenderer',
 
