@@ -21,18 +21,16 @@
             <a href="/"><span>VG</span>-MUSIC</a>
         </div>
         <div id="main_menu">
-            {%set home=Yii.t('main','Home')%}
-            {%set about=Yii.t('main','About')%}
-            {%set contact=Yii.t('main','Contact')%}
-            {%set login=Yii.t('main','Login')%}
-            {%set logout=Yii.t('main','Logout ({username})',{'{username}':App.user.name})%}
             {{ this.widget('zii.widgets.CMenu',{
                 'items':[
-                    {'label':home, 'url':['/site/index']},
-                    {'label':about, 'url':{0:'/site/page', 'view':'about'} },
-                    {'label':contact, 'url':['/site/contact']},
-                    {'label':login, 'url':['/site/login'], 'visible':App.user.isGuest},
-                    {'label':logout, 'url':['/site/logout'], 'visible':not App.user.isGuest}
+                    {'label':Yii.t('menu','Домой'), 'url':['/site/index']},
+                    {'label':Yii.t('menu','О нас'), 'url':{0:'/site/page', 'view':'about'} },
+                    {'label':Yii.t('menu','Контакты'), 'url':['/site/contact']},
+                    {'label':Yii.t('menu','Вход'), 'url':['/site/login'], 'visible':App.user.isGuest},
+                    {'label':'RBAC', 'url':['/rbac/rbac'], 'visible':App.user.checkAccess('SuperAdmin') },
+                    {'label':Yii.t('menu','Админ'), 'url':['/admin'], 'visible':App.user.checkAccess('SuperAdmin') },
+                    {'label':Yii.t('menu','Выход ({username})',{'{username}':App.user.name}), 'url':['/site/logout'], 'visible':not App.user.isGuest},
+
                 ]
             }, true) | raw }}
             {#{'label':'Logout ('~App.user.name~')', 'url':['/site/logout'], 'visible':not App.user.isGuest}#}

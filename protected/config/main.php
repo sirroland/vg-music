@@ -39,6 +39,9 @@ return array(
             // only for display email for better identify Users
             'columnEmail'=>'email' // email (only for display)
         ),
+        'admin'=>array(
+
+        ),
 
 	),
 	
@@ -164,7 +167,7 @@ return array(
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-    'sourceLanguage'=>'en',
+    'sourceLanguage'=>'ru',
     'language'=>'ru',
 	'params'=>array(
 		// this is used in contact page
