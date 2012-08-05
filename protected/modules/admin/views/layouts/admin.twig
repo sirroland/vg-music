@@ -1,0 +1,55 @@
+{# set path=Yii.getPathOfAlias('application')  #}
+{#% set images=App.basePath~'../images'  %#}
+<html>
+<head>
+    <title>{{this.pageTitle}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link  rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/main.css" >
+    <link  rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/form.css" >
+    <link rel="stylesheet" type="text/css" href="{{App.request.baseUrl}}/css/rbac.css" />
+
+    <link rel="stylesheet" href="{{App.request.baseUrl}}/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{App.request.baseUrl}}/css/media/mediaelementplayer.min.css" type="text/css">
+    <script type="text/javascript" src="{{App.request.baseUrl}}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{App.request.baseUrl}}/js/media/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="{{App.request.baseUrl}}/js/music.js"></script>
+
+</head>
+<body>
+<div class="main_wrap">
+    <div class="header">
+        <div class="main_logo">
+            <a href="/"><span>VG</span>-MUSIC</a>
+        </div>
+        <div id="main_menu">
+            {{ this.widget('zii.widgets.CMenu',{
+                'items':[
+                    {'label':Yii.t('menu','Домой'), 'url':['/site/index']},
+                    {'label':Yii.t('menu','О нас'), 'url':{0:'/site/page', 'view':'about'} },
+                    {'label':Yii.t('menu','Контакты'), 'url':['/site/contact']},
+                    {'label':Yii.t('menu','Вход'), 'url':['/site/login'], 'visible':App.user.isGuest},
+                    {'label':'RBAC', 'url':['/rbac/rbac'], 'visible':App.user.checkAccess('SuperAdmin') },
+                    {'label':Yii.t('menu','Админ'), 'url':['/admin'], 'visible':App.user.checkAccess('SuperAdmin') },
+                    {'label':Yii.t('menu','Выход ({username})',{'{username}':App.user.name}), 'url':['/site/logout'], 'visible':not App.user.isGuest},
+
+                ]
+            }, true) | raw }}
+            {#{'label':'Logout ('~App.user.name~')', 'url':['/site/logout'], 'visible':not App.user.isGuest}#}
+        </div>
+        <div  id="language-selector" style="float:right; margin:5px;">
+
+            {{ void(this.widget('application.components.widgets.LanguageSelector')) }}
+
+        </div>
+    </div>
+    <div class="main">
+            {{content | raw}}
+        </div>
+    </div>
+    <div class="footer">
+        {{lang.copyright}}
+    </div>
+</div>
+</body>
+</html>

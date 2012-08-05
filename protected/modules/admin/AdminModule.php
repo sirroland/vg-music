@@ -11,6 +11,8 @@
             $this->setImport(array(
                 'admin.models.*',
                 'admin.components.*',
+                'admin.controllers.*',
+                'admin.views.*',
             ));
         }
 

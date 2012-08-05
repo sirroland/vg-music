@@ -41,7 +41,6 @@ class RbacController extends RBACBaseController
 	}
 	
 	
-	
 	/**
 	 * 
 	 * @desc
