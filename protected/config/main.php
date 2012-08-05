@@ -19,6 +19,10 @@ return array(
 		'application.components.*',
         'application.extensions.EWideImage.EWideImage',
 		//'ext.YiiMongoDbSuite.*',
+        'ext.eoauth.*',
+        'ext.eoauth.lib.*',
+        'ext.lightopenid.*',
+        'ext.eauth.services.*',
 	),
 
 	'modules'=>array(
@@ -50,6 +54,43 @@ return array(
 
 	// application components
 	'components'=>array(
+
+        'loid' => array(
+            'class' => 'ext.lightopenid.loid',
+        ),
+
+        'eauth' => array(
+            'class' => 'ext.eauth.EAuth',
+            'popup' => true, // Use the popup window instead of redirecting.
+            'services' => array( // You can change the providers and their classes.
+                'google' => array(
+                    'class' => 'GoogleOpenIDService',
+                ),
+                'yandex' => array(
+                    'class' => 'YandexOpenIDService',
+                ),
+                'twitter' => array(
+                    'class' => 'TwitterOAuthService',
+                    'key' => '...',
+                    'secret' => '...',
+                ),
+                'facebook' => array(
+                    'class' => 'FacebookOAuthService',
+                    'client_id' => '...',
+                    'client_secret' => '...',
+                ),
+                'vkontakte' => array(
+                    'class' => 'VKontakteOAuthService',
+                    'client_id' => '...',
+                    'client_secret' => '...',
+                ),
+                'mailru' => array(
+                    'class' => 'MailruOAuthService',
+                    'client_id' => '...',
+                    'client_secret' => '...',
+                ),
+            ),
+        ),
 
         'request'=>array(
             'enableCookieValidation'=>true,
