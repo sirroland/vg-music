@@ -87,7 +87,7 @@ class Controller extends CController
                 'checkDefaultIndex'=>'id', // used with buisness Rules if no Index given
                 'allowCaching'=>false,  // cache RBAC Tree -- do not enable while development ;)
                 'accessDeniedUrl'=>'/user/login',// used if User is logged in
-                'loginUrl'=>'/user/login'// used if User is NOT logged in
+                'loginUrl'=>'/login'// used if User is NOT logged in
             ),
         );
     }

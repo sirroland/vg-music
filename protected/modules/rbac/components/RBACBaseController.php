@@ -73,19 +73,19 @@ class RBACBaseController extends Controller
 			$this->renderPartial('/messages/_formSuccess', array('messageSuccess'=>$this->messageSuccess));
 	}
 	
-	public function behaviors()
-	{
-		return array(
-			'accessComponent'=>array(
-				'class'=>'application.modules.rbac.components.RBACAccessVerifier',
-				// optional settings
-				'checkDefaultIndex'=>'id',
-				'allowCaching'=>false,
-				'accessDeniedUrl'=>'/user/login',
-				'loginUrl'=>'/user/login'
-			),
-		);
-	}
+//	public function behaviors()
+//	{
+//		return array(
+//			'accessComponent'=>array(
+//				'class'=>'application.modules.rbac.components.RBACAccessVerifier',
+//				// optional settings
+//				'checkDefaultIndex'=>'id',
+//				'allowCaching'=>false,
+//				'accessDeniedUrl'=>'/user/login',
+//				'loginUrl'=>'/user/login'
+//			),
+//		);
+//	}
 }
 
 

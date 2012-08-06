@@ -97,8 +97,8 @@ return array(
                 'github' => array(
                     // register your app here: https://github.com/settings/applications
                     'class' => 'GitHubOAuthService',
-                    'client_id' => '...',
-                    'client_secret' => '...',
+                    'client_id' => '',
+                    'client_secret' => '',
                 ),
                 'live' => array(
                     // register your app here: https://manage.dev.live.com/Applications/Index
