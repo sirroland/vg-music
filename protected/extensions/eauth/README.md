@@ -37,7 +37,7 @@ The implementation of the authorization on your own server has several advantage
 
 * OpenID: Google, Yandex(ru)
 * OAuth: Twitter, LinkedIn
-* OAuth 2.0: Google, Facebook, GitHub, VKontake(ru), Mail.ru(ru), Moi Krug(ru), Odnoklassniki(ru)
+* OAuth 2.0: Google, Facebook, Live, GitHub, VKontake(ru), Mail.ru(ru), Moi Krug(ru), Odnoklassniki(ru)
 
 
 ### Resources
@@ -118,6 +118,12 @@ The implementation of the authorization on your own server has several advantage
 				'github' => array(
 					// register your app here: https://github.com/settings/applications
 					'class' => 'GitHubOAuthService',
+					'client_id' => '...',
+					'client_secret' => '...',
+				),
+				'live' => array(
+					// register your app here: https://manage.dev.live.com/Applications/Index
+					'class' => 'LiveOAuthService',
 					'client_id' => '...',
 					'client_secret' => '...',
 				),

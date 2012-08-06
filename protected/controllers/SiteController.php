@@ -130,45 +130,45 @@ class SiteController extends Controller
             $authIdentity->cancelUrl = $this->createAbsoluteUrl('site/login');
 
             if ($authIdentity->authenticate()) {
-                $identity = new ServiceUserIdentity($authIdentity);
+                $identity = new EAuthUserIdentity($authIdentity);
 
-                // Успешный вход
+                // successful authentication
                 if ($identity->authenticate()) {
                     Yii::app()->user->login($identity);
 
-                    // Специальный редирект с закрытием popup окна
+                    // special redirect with closing popup window
                     $authIdentity->redirect();
                 }
                 else {
-                    // Закрываем popup окно и перенаправляем на cancelUrl
+                    // close popup window and redirect to cancelUrl
                     $authIdentity->cancel();
                 }
             }
 
-            // Что-то пошло не так, перенаправляем на страницу входа
+            // Something went wrong, redirect to login page
             $this->redirect(array('site/login'));
         }
 
-        // далее стандартный код...
+        // default authorization code through login/password ..
         $model=new LoginForm;
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+        // if it is ajax validation request
+        if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
 
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
+        // collect user input data
+        if(isset($_POST['LoginForm']))
+        {
+            $model->attributes=$_POST['LoginForm'];
+            // validate user input and redirect to the previous page if valid
+            if($model->validate() && $model->login())
+                $this->redirect(Yii::app()->user->returnUrl);
+        }
+        // display the login form
+        $this->render('login',array('model'=>$model));
     }
 
 	/**

@@ -3,7 +3,7 @@
  * EAuthUserIdentity class file.
  *
  * @author Maxim Zemskov <nodge@yandex.ru>
- * @link http://code.google.com/p/yii-eauth/
+ * @link http://github.com/Nodge/yii-eauth/
  * @license http://www.opensource.org/licenses/bsd-license.php
  */
 
@@ -11,7 +11,7 @@
  * EAuthUserIdentity is a base User Identity class to authenticate with EAuth.
  * @package application.extensions.eauth
  */
-class EAuthUserIdentity extends CBaseUserIdentity {
+class EAuthUserIdentity extends ServiceUserIdentity /*CBaseUserIdentity*/ {
 	const ERROR_NOT_AUTHENTICATED = 3;
 
 	/**
@@ -46,8 +46,8 @@ class EAuthUserIdentity extends CBaseUserIdentity {
 		if ($this->service->isAuthenticated) {
 			$this->id = $this->service->id;
 			$this->name = $this->service->getAttribute('name');
-			
 			$this->setState('id', $this->id);
+            print_r($this->id);
 			$this->setState('name', $this->name);
 			$this->setState('service', $this->service->serviceName);
 			
